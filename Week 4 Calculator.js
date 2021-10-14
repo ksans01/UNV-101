@@ -1,10 +1,10 @@
 const readlineSync = require("readline-sync");
 
-var firstNum = readlineSync.questionInt("Please enter your first number: ");
+var firstNumb = readlineSync.questionInt("Please enter your first number: ");
 
 var secondNumb = readlineSync.questionInt("Please enter your second number: ");
 
-var userOperation = readlineSync.question("Please enter the operation to perform (add, sub, mul, div): ");
+var userOperation = readlineSync.question("Please enter the operation to perform (add, sub, mul, div, exp): ");
 
 function add(a, b){
     return (a + b);
@@ -18,6 +18,9 @@ function mul(a, b){
 function div(a, b){
     return (a / b);
 }
+function exp(a, b){
+    return (a ** b);
+}
 
 function calculator(a, b, operation){
     if (operation == "add"){
@@ -28,9 +31,11 @@ function calculator(a, b, operation){
         console.log("Multiply two numbers: " + mul(a , b));
     } else if (operation == "div"){
         console.log("Divide two numbers: " + div(a , b));
+    }  else if (operation == "exp"){
+        console.log( a +  " to the power of " + b + " is " + exp(a, b));
     } else {
         console.log("Invalid Entry");
     }
 }
 
-calculator(firstNum, secondNumb, userOperation);
+calculator(firstNumb, secondNumb, userOperation);
