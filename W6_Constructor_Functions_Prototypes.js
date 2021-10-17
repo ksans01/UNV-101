@@ -1,4 +1,4 @@
-var employees = [];
+const employees = [];
 
 function Employee(name, title, salary)
 {
@@ -21,3 +21,7 @@ employee1.status = "Part Time"
 employee1.printEmployeeForm();
 employee2.printEmployeeForm();
 employee3.printEmployeeForm();
+
+employees.push(employee1, employee2, employee3);
+
+console.log(employees);
